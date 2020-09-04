@@ -1,27 +1,24 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import File from "./File";
 import Folder from "./Folder";
 
-export const DirectoryView = ({files, folders, currentFolder, setCurrentFolder, depth, setDepth, setPreviousFolder}) => {
-
+export const DirectoryView = ({DirectoryState}) => {
     const handleFolderClick = (name) => {
-        setPreviousFolder(currentFolder);
-        setCurrentFolder(name)
-        setDepth(depth + 1);
+        DirectoryState.dispatch({type: "DIRECTORY_DOWN", payload: name});
     }
-
+console.log(DirectoryState.state);
     return(
         <>
-            {files.length > 0 &&
-                files.map((filename, index) => (
+            {DirectoryState.state.files.length > 0 &&
+                DirectoryState.state.files.map((filename, index) => (
                     <File
                         key={filename+index}
                         name={filename}
                     />
                 ))
             }
-            {folders.length > 0 &&
-                folders.map((folderName, index) => (
+            {DirectoryState.state.folders.length > 0 &&
+                DirectoryState.state.folders.map((folderName, index) => (
                     <Folder
                         key={folderName+index}
                         name={folderName}

@@ -22,7 +22,7 @@ export const DirectoryBuilder = (strings = directoryStrings, currentFolder = "ro
         }
     } else {
 
-        //Perform two functions on the current set of strings
+        //Perform two functions on the current set of strings (paths)
         //Firstly filter out so we only get the contents of the folder from our current depth, so depth - 1
         //Extract the names of the contents at the current depth
         //This could've been written a myriad of ways, I personally like chaining array functions, and doesn't become difficult to read if you format it nicely! :)
@@ -43,7 +43,6 @@ export const DirectoryBuilder = (strings = directoryStrings, currentFolder = "ro
             folders: [...folders]
         }
     }
-
 }
 
 export default DirectoryBuilder;
