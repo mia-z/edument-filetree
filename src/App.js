@@ -12,6 +12,7 @@ function App() {
     const history = useHistory();
     const [paths, setPaths] = useState([...directoryStrings]);
     const [currentFolder, setCurrentFolder] = useState("root");
+    const [previousFolder, setPreviousFolder] = useState("");
     const [folders, setFolders] = useState([]);
     const [files, setFiles] = useState([]);
     const [depth, setDepth] = useState(0);
@@ -22,12 +23,25 @@ function App() {
         setFiles(dir.files);
     }, [currentFolder, depth, paths]);
 
+    const handleBack = () => {
+        setCurrentFolder(previousFolder);
+        setDepth(depth < 1 ? 0 : depth - 1);
+    }
+
     return (
         <Router>
             <Container>
+                <Button onClick={() => handleBack()} variant={"primary"}>Back</Button>
                 <FilePath />
                 <br />
-                <DirectoryView files={files} folders={folders} depth={depth} setDepth={setDepth} setCurrentFolder={setCurrentFolder}/>
+                <DirectoryView
+                    files={files}
+                    folders={folders}
+                    depth={depth}
+                    setDepth={setDepth}
+                    currentFolder={currentFolder}
+                    setCurrentFolder={setCurrentFolder}
+                    setPreviousFolder={setPreviousFolder}/>
             </Container>
         </Router>
     );

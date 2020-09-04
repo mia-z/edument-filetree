@@ -2,9 +2,10 @@ import React from 'react';
 import File from "./File";
 import Folder from "./Folder";
 
-export const DirectoryView = ({files, folders, setCurrentFolder, depth, setDepth}) => {
+export const DirectoryView = ({files, folders, currentFolder, setCurrentFolder, depth, setDepth, setPreviousFolder}) => {
 
     const handleFolderClick = (name) => {
+        setPreviousFolder(currentFolder);
         setCurrentFolder(name)
         setDepth(depth + 1);
     }
