@@ -1,9 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { create } from 'react-test-renderer';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Makes sure the root component renders without crashing', () => {
+  const app = () => create(<App />);
+  expect(app).toMatchSnapshot(App);
 });
