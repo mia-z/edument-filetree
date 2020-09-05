@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import File from "./File";
 import Folder from "./Folder";
 

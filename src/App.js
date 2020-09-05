@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react';
 import './App.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { HashRouter as Router, Switch, Route, Link, useHistory } from "react-router-dom";
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { HashRouter as Router } from "react-router-dom";
+import { Container, Button } from "react-bootstrap";
 import DirectoryView from "./Components/DirectoryView";
 import FilePath from "./Components/FilePath";
 import { DirectoryReducer, initialState } from "./Reducers/DirectoryReducer";
