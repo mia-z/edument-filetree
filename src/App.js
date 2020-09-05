@@ -16,7 +16,7 @@ function App() {
     return (
         <Router>
             <Container>
-                <Button onClick={() => handleBack()} variant={"primary"}>Back</Button>
+                <Button id="back-button" onClick={() => handleBack()} variant={"primary"}>Back</Button>
                 <FilePath path={state.currentPath}/>
                 <br />
                 <DirectoryView DirectoryState={{state: state, dispatch: dispatch}}/>

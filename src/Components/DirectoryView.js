@@ -6,7 +6,6 @@ export const DirectoryView = ({DirectoryState}) => {
     const handleFolderClick = (name) => {
         DirectoryState.dispatch({type: "DIRECTORY_DOWN", payload: name});
     }
-console.log(DirectoryState.state);
     return(
         <>
             {DirectoryState.state.files.length > 0 &&

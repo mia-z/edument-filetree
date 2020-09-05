@@ -1,3 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Makes sure the root component renders without crashing 1`] = `[Function]`;
+exports[`Main view Back button shouldn't do anything if the current directory is root 1`] = `
+<div
+  className="container"
+>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id="back-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Back
+  </button>
+  <span>
+    /
+    root
+  </span>
+  <br />
+  <div>
+    fact_marvel_beats_dc.txt
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    marvel
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    dc
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    very
+  </div>
+</div>
+`;
+
+exports[`Main view Back button shouldn't do anything if the current directory is root 2`] = `
+<div
+  className="container"
+>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id="back-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Back
+  </button>
+  <span>
+    /
+    root
+  </span>
+  <br />
+  <div>
+    fact_marvel_beats_dc.txt
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    marvel
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    dc
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    very
+  </div>
+</div>
+`;
+
+exports[`Main view Makes sure the root component renders without crashing 1`] = `
+<div
+  className="container"
+>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id="back-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Back
+  </button>
+  <span>
+    /
+    root
+  </span>
+  <br />
+  <div>
+    fact_marvel_beats_dc.txt
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    marvel
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    dc
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    very
+  </div>
+</div>
+`;
