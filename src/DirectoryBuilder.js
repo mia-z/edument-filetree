@@ -26,12 +26,19 @@ export const DirectoryBuilder = (strings = directoryStrings, currentFolder = "ro
         //Firstly filter out so we only get the contents of the folder from our current depth, so depth - 1
         //Extract the names of the contents at the current depth
         //This could've been written a myriad of ways, I personally like chaining array functions, and doesn't become difficult to read if you format it nicely! :)
-        const pathArrays = strings
+        const filteredArrays = strings
             .filter(str => str.split("/")[depth - 1] === currentFolder)
             .map(str => str.split("/")[depth]);
 
+        //Break early if theres nothing in the directory
+        if (filteredArrays[0] === undefined)
+            return {
+                files: [],
+                folders: []
+            }
+
         //remove duplicates easily by creating a Set -- Set can only contain unique values. Spread these values into an array to get the unique names (similar to DISTINCT)
-        const items = [...new Set(pathArrays)];
+        const items = [...new Set(filteredArrays)];
 
         //Same as above in the if clause
         let files = items.filter(str => str.split(".").length > 1 ? str : false);

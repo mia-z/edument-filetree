@@ -1,6 +1,6 @@
 import React from 'react';
-import File from "./File";
-import Folder from "./Folder";
+import File from "./SubComponents/File";
+import Folder from "./SubComponents/Folder";
 
 export const DirectoryView = ({DirectoryState}) => {
     const handleFolderClick = (name) => {
@@ -12,7 +12,7 @@ export const DirectoryView = ({DirectoryState}) => {
                 DirectoryState.state.files.map((filename, index) => (
                     <File
                         key={filename+index}
-                        name={filename}
+                        name={filename.Name}
                     />
                 ))
             }
@@ -20,7 +20,7 @@ export const DirectoryView = ({DirectoryState}) => {
                 DirectoryState.state.folders.map((folderName, index) => (
                     <Folder
                         key={folderName+index}
-                        name={folderName}
+                        name={folderName.Name}
                         handleFolderClick={handleFolderClick}
                     />
                 ))
