@@ -39,6 +39,7 @@ export const DirectoryReducer = (state = initialState, action) => {
             const DIR_UP_folders = [...GetIndexedDirectories(state.indexedObjects, state.currentPath[state.depth - 1], state.depth - 1)];
             const DIR_UP_files = [...GetIndexedFiles(state.indexedObjects, state.currentPath[state.depth - 1], state.depth - 1)];
             return { ...state,
+                //NOTE: this ternary doesnt even need to be here any more, I just like ternaries
                 currentPath: state.depth < 1 ? [ "root" ] : state.currentPath.filter(path => path !== state.currentFolder),
                 currentFolder: state.currentPath[state.depth - 1],
                 depth: state.depth < 1 ? 0 : state.depth - 1,
@@ -87,15 +88,15 @@ export const DirectoryReducer = (state = initialState, action) => {
                 //The depth we're starting at
                 const depthToStartAt = action.payload.Depth;
                 //Calculate the highest possible depth of the filesystem
-                const highestDepth = indexedObjects.map(obj => obj.Depth).reduce((lastLargest, currentLargest) =>
+                const highestDepth = state.indexedObjects.map(obj => obj.Depth).reduce((lastLargest, currentLargest) =>
                      currentLargest > lastLargest ?  currentLargest : lastLargest);
 
                 //Starting at the top, we get the first set of folders we're going to search until we hit the max.
                 for (let x = depthToStartAt; x < highestDepth; x++) {
                     if (x === depthToStartAt) {
                         //Temporary reference for our temporary list
-                        let foundFoldersUnderStart = indexedObjects.filter(obj =>
-                            obj.Depth === x + 1 && obj.BelongsTo === folderToStartAt && obj.Type === "DIRECTORY");
+                        let foundFoldersUnderStart = state.indexedObjects.filter(obj =>
+                            obj.Depth === depthToStartAt + 1 && obj.BelongsTo === folderToStartAt && obj.Type === "DIRECTORY");
                         //Spread the found ones and remap only the data we're gonna use
                         foldersUnder = [...foldersUnder, ...foundFoldersUnderStart.map(folder => { return { Name: folder.Name, Depth: folder.Depth, BelongsTo: folder.BelongsTo } })];
                         //Spread the results to our final list
@@ -106,17 +107,20 @@ export const DirectoryReducer = (state = initialState, action) => {
                         //Removed the folder from our temp list, to avoid infinite recursion
                         foldersUnder = [...foldersUnder.filter(searchedFolder => searchedFolder.Name !== folder.Name)];
                         //Check if there's folders matching our criteria (matching depth and belong to the previous folder)
-                        foldersUnder = [...state.indexedObjects
+                        foldersUnder = [...foldersUnder, ...state.indexedObjects
                             .filter(obj => obj.Depth === folder.Depth + 1 && obj.BelongsTo === folder.Name && obj.Type === "DIRECTORY")
                             .map(folder => { return { Name: folder.Name, Depth: folder.Depth, BelongsTo: folder.BelongsTo } })];
                         //Spread 'em!
                         collectionToRemove = [...collectionToRemove, ...foldersUnder];
                     }
+
                 }
                 //We have recursively removed folders under a folder, without removing other folders on a parallel depth
                 //This doesnt have to be done for files since we can just compare which folder the file resides in and the depth.
                 OBJ_DELETE_objects = OBJ_DELETE_objects.filter(object => {
                    let found = false;
+                   //Re-add the initially removed folder so we get a reference to FILES in that folder
+                   collectionToRemove = [...collectionToRemove, objectToDeleteRef];
                    collectionToRemove.forEach(objectsToRemove => {
                       if ((object.Name === objectsToRemove.Name &&
                           object.Depth === objectsToRemove.Depth &&
@@ -132,6 +136,7 @@ export const DirectoryReducer = (state = initialState, action) => {
                    else
                        return object;
                 });
+                console.log(OBJ_DELETE_objects);
             }
 
             const OBJ_DELETE_folders = [...GetIndexedDirectories(OBJ_DELETE_objects, state.currentFolder, state.depth)];
@@ -160,7 +165,7 @@ export const DirectoryReducer = (state = initialState, action) => {
             //A new object is create with the updated values
             const renamedObject = new IndexedObject(action.payload.Type, action.payload.newName, action.payload.Depth, action.payload.BelongsTo);
 
-            //We update the childrens' "BelongsTo" of the new file - making new copies of them instead of mutating
+            //We update the children's "BelongsTo" of the new file - making new copies of them instead of mutating
             const updatedChildObjects = state.indexedObjects
                 .filter(obj => obj.Depth === renamedObject.Depth + 1 && obj.BelongsTo === objectToRenameRef.Name)
                 .map(obj => { return new IndexedObject(obj.Type, obj.Name, obj.Depth, renamedObject.Name) });
