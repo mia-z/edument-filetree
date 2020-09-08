@@ -1,1 +1,5 @@
+@import "scss/vars";
 
+html, div#root {
+    background-color: $secondhand-grey;
+}

@@ -1,0 +1,79 @@
+@import "vars";
+
+div.contextual-overlay {
+    position: absolute;
+    margin: auto 0;
+    height: 80%;
+    width: 100%;
+    background-color: rgba(150, 150, 150, 0.4);
+    transition: background-color 0.2s;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    &.hidden {
+        background-color: rgba(150, 150, 150, 0);
+        pointer-events: none;
+        transition: background-color 0.2s;
+    }
+
+    div.context-button {
+        opacity: 100%;
+        border: none;
+        width: 100%;
+        transition: opacity 0.2s;
+        border-radius: 2px;
+        background-color: $light-grey;
+
+        &:hover {
+            background: $dark-slate;
+
+            div.context-button-text {
+                color: $whitish;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+
+        div.context-button-text {
+            width: 100%;
+            text-align: center;
+            transition: opacity 0.2s;
+
+            &.hidden {
+                transition: opacity 0.2s;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        background-color: rgba(150, 150, 150, 0);
+    }
+
+    to {
+        background-color: rgba(150, 150, 150, 0.4);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        background-color: rgba(150, 150, 150, 0.4);
+    }
+
+    to {
+        background-color: rgba(150, 150, 150, 0);
+        display: none;
+    }
+}
