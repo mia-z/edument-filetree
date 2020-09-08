@@ -39,7 +39,7 @@ console.log(payload);
         <Container fluid className={"path-container"}>
             <Row noGutters className={"align-items-center mx-auto"}>
                 <Col md={1}>
-                    <Button disabled={backDisabled ? true : ""} block variant={"secondary"} onClick={() => handleBack()}><i className={"fas fa-level-up-alt"}/></Button>
+                    <Button id={"back-button"} disabled={backDisabled ? true : ""} block variant={"secondary"} onClick={() => handleBack()}><i className={"fas fa-level-up-alt"}/></Button>
                 </Col>
                 <Col md={11}>
                     <div className={"path-text-container"}>
