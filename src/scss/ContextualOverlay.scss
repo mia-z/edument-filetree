@@ -19,7 +19,7 @@ div.contextual-overlay {
     }
 
     div.context-button {
-        opacity: 100%;
+        opacity: 1;
         border: none;
         width: 100%;
         transition: opacity 0.2s;
@@ -39,7 +39,7 @@ div.contextual-overlay {
         }
 
         &.hidden {
-            opacity: 0%;
+            opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s;
         }
