@@ -1,621 +1,615 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main view Back button shouldn't do anything if the current directory is root 1`] = `
-Array [
+<div
+  className="container"
+>
   <div
-    className="mt-2 container"
+    className="box"
   >
     <div
-      className="jumbotron"
+      className="container"
     >
       <div
-        className="path-container container-fluid"
+        className="menu-bar"
       >
-        <div
-          className="align-items-center mx-auto row no-gutters"
+        <button
+          onClick={[Function]}
         >
-          <div
-            className="col-md-1"
-          >
-            <button
-              className="btn btn-secondary btn-block"
-              disabled={true}
-              id="back-button"
-              onClick={[Function]}
-              type="button"
-            >
-              <i
-                className="fas fa-level-up-alt"
-              />
-            </button>
-          </div>
-          <div
-            className="col-md-11"
-          >
-            <div
-              className="path-text-container"
-            >
-              <div
-                className="path-link active"
-                onClick={[Function]}
-              >
-                /
-                root
-              </div>
-            </div>
-          </div>
-        </div>
+          Create new file
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Create new folder
+        </button>
       </div>
+    </div>
+    <div
+      className="path-container container-fluid"
+    >
       <div
-        className="directory-container"
+        className="align-items-center mx-auto row no-gutters"
       >
         <div
-          className="directory-item"
+          className="col-md-1"
         >
-          <div
-            className="options-button"
+          <button
+            className="btn btn-secondary btn-block"
+            disabled={true}
+            id="back-button"
             onClick={[Function]}
+            type="button"
           >
             <i
-              className="fas fa-ellipsis-h fa-fw"
+              className="fas fa-level-up-alt"
             />
-          </div>
-          <div
-            className="contextual-overlay hidden"
-          >
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-3 far fa-file-alt fa-5x"
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              fact_marvel_beats_dc
-              .
-            </div>
-            <div
-              className="file-extension"
-            >
-              txt
-            </div>
-          </div>
+          </button>
         </div>
         <div
-          className="directory-item folder"
+          className="col-md-11"
         >
           <div
-            className="options-button"
-            onClick={[Function]}
-          >
-            <i
-              className="fas fa-ellipsis-h fa-fw"
-            />
-          </div>
-          <div
-            className="contextual-overlay hidden"
+            className="path-text-container"
           >
             <div
-              className="context-button hidden"
+              className="path-link active"
+              onClick={[Function]}
             >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-4 far fa-folder fa-5x"
-            onClick={[Function]}
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              marvel
-            </div>
-          </div>
-        </div>
-        <div
-          className="directory-item folder"
-        >
-          <div
-            className="options-button"
-            onClick={[Function]}
-          >
-            <i
-              className="fas fa-ellipsis-h fa-fw"
-            />
-          </div>
-          <div
-            className="contextual-overlay hidden"
-          >
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-4 far fa-folder fa-5x"
-            onClick={[Function]}
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              dc
-            </div>
-          </div>
-        </div>
-        <div
-          className="directory-item folder"
-        >
-          <div
-            className="options-button"
-            onClick={[Function]}
-          >
-            <i
-              className="fas fa-ellipsis-h fa-fw"
-            />
-          </div>
-          <div
-            className="contextual-overlay hidden"
-          >
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-4 far fa-folder fa-5x"
-            onClick={[Function]}
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              very
+              /
+              root
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>,
-  <button
-    className="btn btn-primary"
-    disabled={false}
-    id="new-dir-button"
-    onClick={[Function]}
-    type="button"
-  >
-    New Folder
-  </button>,
-  <button
-    className="btn btn-primary"
-    disabled={false}
-    id="new-file-button"
-    onClick={[Function]}
-    type="button"
-  >
-    New File
-  </button>,
-]
+    <div
+      className="directory-container"
+    >
+      <div
+        className="directory-item"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-3 far fa-file-alt fa-5x"
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            fact_marvel_beats_dc
+            .
+          </div>
+          <div
+            className="file-extension"
+          >
+            txt
+          </div>
+        </div>
+      </div>
+      <div
+        className="directory-item folder"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-4 far fa-folder fa-5x"
+          onClick={[Function]}
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            marvel
+          </div>
+        </div>
+      </div>
+      <div
+        className="directory-item folder"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-4 far fa-folder fa-5x"
+          onClick={[Function]}
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            dc
+          </div>
+        </div>
+      </div>
+      <div
+        className="directory-item folder"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-4 far fa-folder fa-5x"
+          onClick={[Function]}
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            very
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Main view Back button shouldn't do anything if the current directory is root 2`] = `
-Array [
+<div
+  className="container"
+>
   <div
-    className="mt-2 container"
+    className="box"
   >
     <div
-      className="jumbotron"
+      className="container"
     >
       <div
-        className="path-container container-fluid"
+        className="menu-bar"
+      >
+        <button
+          onClick={[Function]}
+        >
+          Create new file
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Create new folder
+        </button>
+      </div>
+    </div>
+    <div
+      className="path-container container-fluid"
+    >
+      <div
+        className="align-items-center mx-auto row no-gutters"
       >
         <div
-          className="align-items-center mx-auto row no-gutters"
+          className="col-md-1"
+        >
+          <button
+            className="btn btn-secondary btn-block"
+            disabled={true}
+            id="back-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="fas fa-level-up-alt"
+            />
+          </button>
+        </div>
+        <div
+          className="col-md-11"
         >
           <div
-            className="col-md-1"
-          >
-            <button
-              className="btn btn-secondary btn-block"
-              disabled={true}
-              id="back-button"
-              onClick={[Function]}
-              type="button"
-            >
-              <i
-                className="fas fa-level-up-alt"
-              />
-            </button>
-          </div>
-          <div
-            className="col-md-11"
+            className="path-text-container"
           >
             <div
-              className="path-text-container"
+              className="path-link "
+              onClick={[Function]}
             >
-              <div
-                className="path-link "
-                onClick={[Function]}
-              >
-                /
-                root
-              </div>
+              /
+              root
             </div>
           </div>
         </div>
       </div>
-      <div
-        className="directory-container"
-      />
     </div>
-  </div>,
-  <button
-    className="btn btn-primary"
-    disabled={false}
-    id="new-dir-button"
-    onClick={[Function]}
-    type="button"
-  >
-    New Folder
-  </button>,
-  <button
-    className="btn btn-primary"
-    disabled={false}
-    id="new-file-button"
-    onClick={[Function]}
-    type="button"
-  >
-    New File
-  </button>,
-]
+    <div
+      className="directory-container"
+    />
+  </div>
+</div>
 `;
 
 exports[`Main view Makes sure the root component renders without crashing 1`] = `
-Array [
+<div
+  className="container"
+>
   <div
-    className="mt-2 container"
+    className="box"
   >
     <div
-      className="jumbotron"
+      className="container"
     >
       <div
-        className="path-container container-fluid"
+        className="menu-bar"
       >
-        <div
-          className="align-items-center mx-auto row no-gutters"
+        <button
+          onClick={[Function]}
         >
-          <div
-            className="col-md-1"
-          >
-            <button
-              className="btn btn-secondary btn-block"
-              disabled=""
-              id="back-button"
-              onClick={[Function]}
-              type="button"
-            >
-              <i
-                className="fas fa-level-up-alt"
-              />
-            </button>
-          </div>
-          <div
-            className="col-md-11"
-          >
-            <div
-              className="path-text-container"
-            >
-              <div
-                className="path-link active"
-                onClick={[Function]}
-              >
-                /
-                root
-              </div>
-            </div>
-          </div>
-        </div>
+          Create new file
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Create new folder
+        </button>
       </div>
+    </div>
+    <div
+      className="path-container container-fluid"
+    >
       <div
-        className="directory-container"
+        className="align-items-center mx-auto row no-gutters"
       >
         <div
-          className="directory-item"
+          className="col-md-1"
         >
-          <div
-            className="options-button"
+          <button
+            className="btn btn-secondary btn-block"
+            disabled=""
+            id="back-button"
             onClick={[Function]}
+            type="button"
           >
             <i
-              className="fas fa-ellipsis-h fa-fw"
+              className="fas fa-level-up-alt"
             />
-          </div>
-          <div
-            className="contextual-overlay hidden"
-          >
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-3 far fa-file-alt fa-5x"
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              fact_marvel_beats_dc
-              .
-            </div>
-            <div
-              className="file-extension"
-            >
-              txt
-            </div>
-          </div>
+          </button>
         </div>
         <div
-          className="directory-item folder"
+          className="col-md-11"
         >
           <div
-            className="options-button"
-            onClick={[Function]}
-          >
-            <i
-              className="fas fa-ellipsis-h fa-fw"
-            />
-          </div>
-          <div
-            className="contextual-overlay hidden"
+            className="path-text-container"
           >
             <div
-              className="context-button hidden"
+              className="path-link active"
+              onClick={[Function]}
             >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-4 far fa-folder fa-5x"
-            onClick={[Function]}
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              marvel
-            </div>
-          </div>
-        </div>
-        <div
-          className="directory-item folder"
-        >
-          <div
-            className="options-button"
-            onClick={[Function]}
-          >
-            <i
-              className="fas fa-ellipsis-h fa-fw"
-            />
-          </div>
-          <div
-            className="contextual-overlay hidden"
-          >
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-4 far fa-folder fa-5x"
-            onClick={[Function]}
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              dc
-            </div>
-          </div>
-        </div>
-        <div
-          className="directory-item folder"
-        >
-          <div
-            className="options-button"
-            onClick={[Function]}
-          >
-            <i
-              className="fas fa-ellipsis-h fa-fw"
-            />
-          </div>
-          <div
-            className="contextual-overlay hidden"
-          >
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Rename
-              </div>
-            </div>
-            <div
-              className="context-button hidden"
-            >
-              <div
-                className="context-button-text hidden"
-                onClick={[Function]}
-              >
-                Delete
-              </div>
-            </div>
-          </div>
-          <i
-            className="mt-4 far fa-folder fa-5x"
-            onClick={[Function]}
-          />
-          <div
-            className="trunc-container"
-          >
-            <div
-              className="file-name"
-            >
-              very
+              /
+              root
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>,
-  <button
-    className="btn btn-primary"
-    disabled={false}
-    id="new-dir-button"
-    onClick={[Function]}
-    type="button"
-  >
-    New Folder
-  </button>,
-  <button
-    className="btn btn-primary"
-    disabled={false}
-    id="new-file-button"
-    onClick={[Function]}
-    type="button"
-  >
-    New File
-  </button>,
-]
+    <div
+      className="directory-container"
+    >
+      <div
+        className="directory-item"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-3 far fa-file-alt fa-5x"
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            fact_marvel_beats_dc
+            .
+          </div>
+          <div
+            className="file-extension"
+          >
+            txt
+          </div>
+        </div>
+      </div>
+      <div
+        className="directory-item folder"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-4 far fa-folder fa-5x"
+          onClick={[Function]}
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            marvel
+          </div>
+        </div>
+      </div>
+      <div
+        className="directory-item folder"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-4 far fa-folder fa-5x"
+          onClick={[Function]}
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            dc
+          </div>
+        </div>
+      </div>
+      <div
+        className="directory-item folder"
+      >
+        <div
+          className="options-button"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-ellipsis-h fa-fw"
+          />
+        </div>
+        <div
+          className="contextual-overlay hidden"
+        >
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Rename
+            </div>
+          </div>
+          <div
+            className="context-button hidden"
+          >
+            <div
+              className="context-button-text hidden"
+              onClick={[Function]}
+            >
+              Delete
+            </div>
+          </div>
+        </div>
+        <i
+          className="mt-4 far fa-folder fa-5x"
+          onClick={[Function]}
+        />
+        <div
+          className="trunc-container"
+        >
+          <div
+            className="file-name"
+          >
+            very
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
