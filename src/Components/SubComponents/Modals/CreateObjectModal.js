@@ -32,7 +32,7 @@ export const CreateObjectModal = ({type, dispatch, state, destroy}) => {
     }, [name, type, state.indexedObjects, state.files, state.folders])
 
     const handleCreate = () => {
-        dispatch({type: "OBJECT_CREATE", payload: { type: type, name: name }});
+        dispatch({type: "OBJECT_CREATE", payload: { type: type.split("_")[1], name: name }});
         setVisible(false);
     }
 
