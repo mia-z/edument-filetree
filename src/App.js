@@ -11,7 +11,6 @@ import MenuBar from "./Components/MenuBar";
 
 function App() {
     const [state, dispatch] = useReducer(DirectoryReducer, initialState);
-
     return (
         <Router>
             <Container>

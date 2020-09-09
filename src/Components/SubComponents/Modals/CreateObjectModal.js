@@ -29,7 +29,7 @@ export const CreateObjectModal = ({type, dispatch, state, destroy}) => {
 
             default: throw new Error("Invalid CreateObjectModal type");
         }
-    }, [name, type, state.indexedObjects])
+    }, [name, type, state.indexedObjects, state.files, state.folders])
 
     const handleCreate = () => {
         dispatch({type: "OBJECT_CREATE", payload: { type: type, name: name }});
