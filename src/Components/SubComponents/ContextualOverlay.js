@@ -1,30 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../scss/ContextualOverlay.scss";
-import ConfirmModal from "./ConfirmModal";
-
+import useModals from "../../Hooks/useModals";
 export const ContextualOverlay = ({objectProps, selected, hideContextual, DispatchContext}) => {
-    const [showModal, setShowModal] = useState(false);
-    const [modalProps, setModalProps] = useState({});
-
+    const modal = useModals();
     const handleRename = () => {
-        setModalProps({
-            type: "rename",
+        modal.set({
+            type: "RENAME",
             dispatch: DispatchContext,
-            dismissModal: () => setShowModal(false),
             objectProps: objectProps
         });
-        setShowModal(true);
         hideContextual();
     }
 
     const handleDelete = () => {
-        setModalProps({
-            type: "delete",
+        modal.set({
+            type: "DELETE",
             dispatch: DispatchContext,
-            dismissModal: () => setShowModal(false),
             objectProps: objectProps
         });
-        setShowModal(true);
         hideContextual();
     }
 
@@ -38,7 +31,7 @@ export const ContextualOverlay = ({objectProps, selected, hideContextual, Dispat
                     <div className={`context-button-text ${selected ? "" : "hidden"}`} onClick={() => handleDelete()}>Delete</div>
                 </div>
             </div>
-            <ConfirmModal visible={showModal} {...modalProps} />
+            {modal.render()}
         </>
     )
 }

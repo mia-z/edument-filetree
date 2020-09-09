@@ -57,8 +57,8 @@ export const DirectoryReducer = (state = initialState, action) => {
                 files: [...DIR_JUMP_files] };
 
         case "OBJECT_CREATE":
-            const newDirectory = new IndexedObject(action.payload.type, action.payload.name, state.depth, state.currentFolder);
-            const OBJ_CREATE_objects = [...state.indexedObjects, newDirectory];
+            const newObject = new IndexedObject(action.payload.type, action.payload.name, state.depth, state.currentFolder);
+            const OBJ_CREATE_objects = [...state.indexedObjects, newObject];
             const OBJ_CREATE_folders = [...GetIndexedDirectories(OBJ_CREATE_objects, state.currentFolder, state.depth)];
             const OBJ_CREATE_files = [...GetIndexedFiles(OBJ_CREATE_objects, state.currentFolder, state.depth)];
             return {...state,

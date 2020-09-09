@@ -1,0 +1,41 @@
+@import "vars";
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background: $flat-blue-1;
+    bottom: -5px;
+    box-shadow: 0px 0px 5px 0px rgba(100,100,100,0.5);
+    border-radius: 2px;
+    padding: 20px 25px 0 25px;
+
+    button {
+        position: relative;
+        background-color: $flat-blue-2;
+        outline: none;
+        border: none;
+        font-family: $roboto;
+        color: whitesmoke;
+        padding: 5px 10px;
+        border-radius: 2px;
+        transition: top 0.2s;
+        margin: 5px 10px;
+        top: 0;
+
+        &:hover {
+            top: 5px;
+            transition: top 0.2s;
+        }
+
+        &:active {
+            background-color: $flat-blue-3;
+            top: 7px;
+            transition: top 0.2s;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

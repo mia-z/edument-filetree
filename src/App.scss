@@ -3,3 +3,10 @@
 html, div#root {
     background-color: $secondhand-grey;
 }
+
+.box {
+    margin: 10px 5px;
+    padding: 20px 30px;
+    background-color: $whitish;
+    border-radius: 2px;
+}
