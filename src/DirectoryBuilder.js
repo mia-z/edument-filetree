@@ -53,5 +53,3 @@ export const DirectoryBuilder = (strings = directoryStrings, currentFolder = "ro
 }
 
 export default DirectoryBuilder;
-
-//TODO: create test - if depth is > 1 currentFolder shouldn't be "root"
